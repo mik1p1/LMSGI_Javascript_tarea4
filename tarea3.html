@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function tablaMultiplicar() {
+            let numero = prompt("Dime un número y hago la tabla de multiplicar");
+            document.write("<h1>Tabla del " + numero + "</h1>");
+            document.write("<table border='1'>");
+            
+            for (let i = 1; i <= 10; i++) {
+                document.write("<tr><td>" + numero + " x " + i + "</td><td>" + (numero * i) + "</td></tr>");
+            }
+            
+            document.write("</table>");
+        }
+    
+        function factorial() {
+            let numero = prompt("Dime un número que le calculo el factorial:");
+            let factorial = 1;
+            
+            for (let i = 1; i <= numero; i++) {
+                factorial *= i;
+            }
+            
+            alert("El factorial de " + numero + " es " + factorial);
+        }
+    
+        function alineacion() {
+            let alineacion = ['Benzema', 'Bale', 'Marcelo', 'Sergio R.'];
+            alineacion[4] = 'Casemiro';
+            let posicion = prompt("Dime posición:");
+            
+            alert(alineacion[posicion]);
+        }
+    
+        function imprime_alineacion() {
+            let alineacion = ['Benzema', 'Bale', 'Marcelo', 'Sergio R.'];
+            alineacion[4] = 'Casemiro';
+            
+            for (let i = 0; i < alineacion.length; i++) {
+                document.write(i + " " + alineacion[i] + "<br>");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <button onclick="factorial()">factorialn</button>
+    <button onclick="tablaMultiplicar()">tablaMultiplicar</button>
+    <button onclick="alineacion()">alineacion</button>
+    <button onclick="imprime_alineacion()">Imprime Alineación</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqúi para volver al índice de la tarea</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #provincia {
+            visibility: hidden; /* Inicialmente oculto */
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label for="pais">País:</label>
+        <select id="pais" name="pais" onchange="mostrarProvincia()">
+            <option value="">Elija destino</option>
+            <option value="es">España</option>
+            <option value="otro">Fuera de España</option>
+        </select>
+
+        <br><br>
+
+        <label for="provincia">Provincia:</label>
+        <select id="provincia" name="provincia">
+            <option value="madrid">Madrid</option>
+            <option value="barcelona">Barcelona</option>
+            <option value="sevilla">Sevilla</option>
+            <option value="valencia">Valencia</option>
+        </select>
+    </form>
+
+    <script>
+        function mostrarProvincia() {
+            var pais = document.getElementById("pais").value;
+            var provincia = document.getElementById("provincia");
+
+            if (pais === "es") {
+                provincia.style.visibility = "visible";
+            } else {
+                provincia.style.visibility = "hidden";
+            }
+        }
+    </script>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqúi para volver al índice de la tarea</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function cambiaAnchoImagen() {
+        let img = document.getElementById("imagen");
+        img.width = img.width + 100;
+      }
+
+      function cambiaLargoImagen() {
+        let img = document.getElementById("imagen");
+        img.height = img.height + 100;
+      }
+      
+      
+      function cambiaSrc() {
+        document.getElementById("imagen").src = "camaleon.jpg";
+      }
+      
+      function cambiaCaja() {
+        let box = document.getElementById("caja");
+        box.style.width = "500px";
+        box.style.backgroundColor = "lightgreen";
+        box.style.fontSize = "50px";
+        box.style.color = "red";
+      }
+      
+      </script>
+</head>
+
+<body>
+    <img id="imagen" src="image.jpg" width="200" height="100">
+    <button onclick="cambiaAnchoImagen()">Cambia Ancho Imagen</button>
+    <button onclick="cambiaLargoImagen()">Cambia largo Imagen</button>
+    <button onclick="cambiaSrc()">Cambia Imagen</button>
+    <div id="caja" style="width: 300px;">
+        Esto es una caja
+    </div>
+    <button onclick="cambiaCaja()">Cambia Caja</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqúi para volver al índice de la tarea</a>
+</body>
+
+</html>

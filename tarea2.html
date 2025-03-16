@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 JS</title>
+    <script>
+
+        function parImpar(numero){
+            if(numero % 2 == 0){
+                return "par";
+            } else {
+                return "impar";
+            }
+        }
+
+        function esPar(){
+            let num = parseInt(prompt("Dime un numero"))
+            let resultado = parImpar(num);
+            alert("El numero " + num + " es " + resultado)
+        }
+
+        function sumar(){
+        let num1 = parseInt(prompt("Dime un número"))
+        let num2 = parseInt(prompt("Dime otro número"))
+        let suma = num1+num2;
+        alert(num1 + "+" + num2 + "= " + suma )
+        }
+    </script>
+</head>
+<body style="text-align: center;margin-top: 5%;">
+    <button onclick="sumar()" style="font-size: 2rem;"> función sumar</button>
+    <button onclick="esPar()" style="font-size: 2rem;"> Función esPar</button>
+    <a href="index.html" style=" text-decoration: none;" >Pulsa aqúi para volver al índice de la tarea</a>
+</body>
+</html>
